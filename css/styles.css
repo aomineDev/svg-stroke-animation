@@ -14,30 +14,35 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 svg {
   width: 500px;
+  max-width: 100%;
 }
 path {
   fill: none;
   stroke: #fff;
   stroke-width: 2;
   stroke-miterlimit: 4;
-  stroke-dasharray: 500;
-  animation: animate 3s cubic-bezier(0, 0.23, 1, 0.1) forwards;
+  stroke-dasharray: 450;
+  animation: animate 5s cubic-bezier(0, 0.23, 1, 0.1) infinite alternate
+    forwards;
 }
 @keyframes animate {
   0% {
-    opacity: 0;
-    stroke-dashoffset: 500;
+    stroke-dashoffset: 450;
   }
-  30% {
-    opacity: 1;
-    stroke-dashoffset: 500;
+  10% {
+    stroke-dashoffset: 450;
   }
-  90% {
+  80% {
     stroke-dashoffset: 0;
     fill: transparent;
+  }
+  90% {
+    fill: #fff;
   }
   100% {
     fill: #fff;
