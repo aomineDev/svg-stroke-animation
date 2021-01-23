@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1610048899906-d8f64bc45464?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDExNHxibzhqUUtUYUUwWXx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1440&q=60");
+  background-position: center;
+  background-size: cover;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+svg {
+  width: 500px;
+}
+path {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-miterlimit: 4;
+  stroke-dasharray: 500;
+  animation: animate 3s cubic-bezier(0, 0.23, 1, 0.1) forwards;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 500;
+  }
+  30% {
+    opacity: 1;
+    stroke-dashoffset: 500;
+  }
+  90% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  100% {
+    fill: #fff;
+  }
+}
